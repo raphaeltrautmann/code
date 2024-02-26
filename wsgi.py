@@ -1,11 +1,10 @@
-from flask import Flask, render_template
+"""WSGI"""
 
-app = Flask(__name__)
+from src import init_app
 
-@app.route("/")
-def hello_world():
-    return "<p><h1> M M M NOSSO MUNDO!!!</h1></p>" 
-    # return render_template("./index.html")
-    
+
+app = init_app()
+
+ 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5004)

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    {% include "base/head.jinja" %}
+
+    {% block head %}{% endblock %}
+</head>
+<body id="body">
+
+    {% include "base/leftbar-tab-menu.jinja" %}
+    {% include "base/topbar.jinja" %}
+
+    <div class="page-wrapper">
+        <!-- Page Content-->
+        <div class="page-content-tab">
+
+            {% block content %}{% endblock %}
+        </div>
+    </div>    
+    
+    {% include "base/script.jinja" %}
+    
+    {% block script %}{% endblock %}
+</body>
+</html>
